@@ -1,19 +1,21 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    padding-top: 80px;
+    
     h2{
         font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 12px;
+        font-size: 20px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 12px;
     }
     ul{
         display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+        gap: 15px;
+        flex-wrap: wrap;
     }
 `
 

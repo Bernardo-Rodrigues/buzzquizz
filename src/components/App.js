@@ -13,7 +13,7 @@ export default function App(){
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Homepage/>}></Route>
-                    <Route path="/quizz/:idQuizz" element={<Quizz/>}></Route>
+                    <Route path="/quizz/:quizzId" element={<Quizz/>}></Route>
                 </Routes>
             </BrowserRouter>
         </Container>

@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
  	width: 1050px;
-    padding: 80px 0 250px;
+    padding-bottom: 250px;
 
     display: flex;
     flex-direction: column;
