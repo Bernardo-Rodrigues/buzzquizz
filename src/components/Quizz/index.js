@@ -19,7 +19,7 @@ export default function Quizz(){
     return(
         <>
         <QuizzBanner img={quizz.image} title={quizz.title}/>
-        <QuizzContainer questions={quizz.questions}/>
+        <QuizzContainer questions={quizz.questions} selectedFromGlobal={quizz}/>
         </>
     )
 }

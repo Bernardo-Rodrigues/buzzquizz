@@ -63,7 +63,7 @@ export const QuestionTitle = styled.div`
     justify-content: center;
     align-items: center;
 `
-export const AnsersWrapper = styled.div`
+export const AnswersWrapper = styled.div`
     width: 690px;
     display: flex;
     flex-wrap: wrap;
@@ -91,4 +91,25 @@ export const Answer = styled.div`
         object-position: center;
         object-fit: cover;
     }
+
+    span{
+        font-weight: 700;
+        font-style: bold;
+        font-size: 20px;
+        line-height: 23px;
+
+        color: ${ ({status}) => !status  ? "#000" : status === "correct" ? "#0f0" : "#f00"};
+
+        word-break: break-word;
+    }
+`
+export const Fade = styled.div`
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: rgba(255, 255, 255, 0.70);
 `
