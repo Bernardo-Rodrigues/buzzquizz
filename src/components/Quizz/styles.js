@@ -44,6 +44,19 @@ export const QuestionWrapper = styled.div`
     padding: 28px 35px;
     margin: 42px 0;
 `
+export const ConclusionWrapper = styled.div`
+    width: 760px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #fff;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
+
+    padding: 28px 35px;
+    margin: 42px 0;
+`
 export const QuestionTitle = styled.div`
     width: 690px;
     height: 138px;
@@ -69,6 +82,36 @@ export const AnswersWrapper = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+`
+export const ImgDescriptionWrapper = styled.div`
+    width: 690px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    img{
+        width: 330px;
+        height: 248px;
+    
+        object-position: center;
+        object-fit: cover;
+    }
+
+    p{
+        font-weight: 700;
+        font-style: normal;
+        font-size: 19px;
+        line-height: 25px;
+        text-align: left;
+
+        width: 330px;
+        height: 248px;
+        word-break: break-word;
+
+        display: flex;
+        align-items: flex-start;
+    }
 `
 export const Answer = styled.div`
     width: 330px;
@@ -112,4 +155,60 @@ export const Fade = styled.div`
     z-index: 1;
 
     background-color: rgba(255, 255, 255, 0.70);
+`
+export const ConclusionTitle = styled.div`
+    width: 690px;
+    height: 100px;
+
+    margin-bottom: 20px;
+    padding: 8px 18px;
+    word-break: break-word;
+
+    font-weight: 700;
+    font-style: normal;
+    font-size: 23px;
+    line-height: 27px; 
+    color: #fff;
+    background-color: #EC362D;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const ResetQuizz = styled.div`
+    width: 260px;
+    height: 52px;
+
+    border-radius: 15px;
+    border: none;
+    background-color: #ec362d ;
+
+    color:#FFF5F4;
+    font-size: 21px;
+    line-height: 25px;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+`
+export const BackHome = styled.div`
+    width: 260px;
+    height: 52px;
+
+    border: none;
+
+    color: #818181;
+    font-size: 21px;
+    line-height: 25px;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
 `

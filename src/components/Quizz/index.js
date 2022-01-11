@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 import axios from "axios";
 import QuizzBanner from "./QuizzBanner";
-import QuizzContainer from "./QuizzContainer";
+import QuizzContainer from "./QuizzContainer/";
 import { LoadingScreen } from "../Loading/styles";
 
 export default function Quizz(){
