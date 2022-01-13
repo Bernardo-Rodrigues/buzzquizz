@@ -1,4 +1,4 @@
-import { Banner } from "./styles"
+import { Banner } from "../../pageStyles"
 
 export default function QuizzBanner({img, title}) {
     return(

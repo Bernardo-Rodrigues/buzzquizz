@@ -1,18 +1,8 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+
 import { Link } from "react-router-dom"
-import { Container, Quizz, QuizzBackground } from "../Homepage/styles"
-import Loading from "../Loading"
+import { Container, Quizz, QuizzBackground } from "../../pageStyles"
 
-export default function AllQuizzes(){
-    const [quizzes, setQuizzes] = useState(null)
-
-    useEffect(()=>{
-        const promess = axios.get("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes")
-        promess.then( answer => setQuizzes(answer.data))
-    }, [])
-
-    if(!quizzes) return <Loading/>
+export default function AllQuizzes({quizzes}){
 
     return(
         <Container>

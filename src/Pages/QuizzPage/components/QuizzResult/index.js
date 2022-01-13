@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ConclusionWrapper, ConclusionTitle, ImgDescriptionWrapper, ResetQuizz, BackHome } from "../styles";
+import { ConclusionWrapper, ConclusionTitle, ImgDescriptionWrapper, ResetQuizz, BackHome } from "../../pageStyles";
 
 export default function Result({questions, selectedFromGlobal, rightAnswers, wrongAnswers, wrapperPos, questionsAnswered}) {
 
@@ -22,7 +22,6 @@ export default function Result({questions, selectedFromGlobal, rightAnswers, wro
             let accuracy = Math.ceil((rightAnswers/totalAnswers)*100).toFixed();
     
             selectedFromGlobal.levels.forEach((level)=>{
-                console.log(accuracy, level.minValue)
                 if( accuracy >= Number(level.minValue)){
                     adequateLevelindex = selectedFromGlobal.levels.indexOf(level); 
                 }
@@ -49,7 +48,7 @@ export default function Result({questions, selectedFromGlobal, rightAnswers, wro
                 windowScroller(finalPos);
             }, 2000);
         }
-    }, [questionsAnswered])
+    }, [questionsAnswered, questions.length, rightAnswers, selectedFromGlobal.levels, wrapperPos, wrongAnswers])
 
     return final
 }

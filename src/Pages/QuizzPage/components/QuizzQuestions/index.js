@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import {QuestionWrapper, QuestionTitle, AnswersWrapper, Answer, Fade } from "../styles"
+import {QuestionWrapper, QuestionTitle, AnswersWrapper, Answer, Fade } from "../../pageStyles"
 
 export default function  Questions({questions, selectedFromGlobal, questionsAnswered, setQuestionsAnswered, rightAnswers, setRightAnswers, wrongAnswers, setWrongAnswers, setWrapperPos}) {
     const [ questionsShuffled, setQuestionsShuffled] = useState([])
@@ -36,23 +36,19 @@ export default function  Questions({questions, selectedFromGlobal, questionsAnsw
     }
 
     function shuffleArray(arr) {
-        // Loop em todos os elementos
-    for (let i = arr.length - 1; i > 0; i--) {
-            // Escolhendo elemento aleatório
-        const j = Math.floor(Math.random() * (i + 1));
-        // Reposicionando elemento
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    // Retornando array com aleatoriedade
-    return arr;
-}   
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+    }   
 
     useEffect(()=>{
         questions.forEach(element => {
             element.answers = shuffleArray(element.answers)
         })
         setQuestionsShuffled(questions)
-    }, [])
+    }, [questions])
 
     return(
         <>
