@@ -52,7 +52,6 @@ export const YourQuizzesContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 12px;
     }
 
     h2{
@@ -62,7 +61,6 @@ export const YourQuizzesContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 12px;
     }
     ul{
         display: flex;
@@ -81,18 +79,16 @@ export const YourQuizzesContainer = styled.div`
 `
 export const AddQuizz = styled.div`
     display: flex;
-
+    margin-bottom: 12px;
     button{
         margin-left: 17px;
-    border-radius: 50%;
-    border: 0;
-    background: 0;
-    color: #ec362d;
-    font-size: 40px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 12px;
+        border-radius: 50%;
+        border: 0;
+        background: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
     }
 `
