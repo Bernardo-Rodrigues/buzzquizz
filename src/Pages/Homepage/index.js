@@ -14,7 +14,6 @@ export default function Homepage(){
         api.quizzes
             .getQuizzes()
             .then( answer => setQuizzes(answer.data))
-            //eslint-disable-next-line
     }, [])
 
     if(!quizzes.length) return <Loading/>

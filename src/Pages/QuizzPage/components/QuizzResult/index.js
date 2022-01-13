@@ -1,17 +1,24 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { SelectedQuizz } from "../../../../Context/selectedQuizz";
 import { ConclusionWrapper, ConclusionTitle, ImgDescriptionWrapper, ResetQuizz, BackHome } from "../../pageStyles";
 
-export default function Result({questions, selectedFromGlobal, rightAnswers, wrongAnswers, wrapperPos, questionsAnswered}) {
+export default function Result() {
 
     const [final, setFinal] = useState(null)
+
+    const { quizz, questionsAnswered, rightAnswers, wrongAnswers, wrapperPos } = useContext(SelectedQuizz)
+
+    const questions=quizz.questions
+    const selectedFromGlobal=quizz
 
     function windowScroller(position) {
         window.scrollTo({
             top: position,
             behavior: 'smooth'
         });
+        console.log("opa")
     }
 
     useEffect(()=> {
@@ -48,7 +55,7 @@ export default function Result({questions, selectedFromGlobal, rightAnswers, wro
                 windowScroller(finalPos);
             }, 2000);
         }
-    }, [questionsAnswered, questions.length, rightAnswers, selectedFromGlobal.levels, wrapperPos, wrongAnswers])
+    }, [questionsAnswered])
 
     return final
 }

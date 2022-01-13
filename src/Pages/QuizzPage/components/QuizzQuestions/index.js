@@ -1,10 +1,16 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { SelectedQuizz } from "../../../../Context/selectedQuizz"
 import {QuestionWrapper, QuestionTitle, AnswersWrapper, Answer, Fade } from "../../pageStyles"
 
-export default function  Questions({questions, selectedFromGlobal, questionsAnswered, setQuestionsAnswered, rightAnswers, setRightAnswers, wrongAnswers, setWrongAnswers, setWrapperPos}) {
+export default function  Questions() {
     const [ questionsShuffled, setQuestionsShuffled] = useState([])
     
     const [answered, setAnswered] = useState([])
+
+    const { quizz, questionsAnswered, setQuestionsAnswered, rightAnswers, setRightAnswers, wrongAnswers, setWrongAnswers, setWrapperPos } = useContext(SelectedQuizz)
+
+    const questions= quizz.questions 
+    const selectedFromGlobal=quizz
 
     function selectingAnswer(e) {
         let wrapper = e.currentTarget.parentNode.classList[3][7];
@@ -48,7 +54,7 @@ export default function  Questions({questions, selectedFromGlobal, questionsAnsw
             element.answers = shuffleArray(element.answers)
         })
         setQuestionsShuffled(questions)
-    }, [questions])
+    }, [])
 
     return(
         <>
