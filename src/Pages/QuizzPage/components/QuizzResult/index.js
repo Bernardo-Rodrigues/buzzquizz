@@ -55,6 +55,7 @@ export default function Result() {
                 windowScroller(finalPos);
             }, 2000);
         }
+        //eslint-disable-next-line
     }, [questionsAnswered])
 
     return final

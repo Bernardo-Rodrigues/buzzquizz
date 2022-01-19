@@ -115,7 +115,7 @@ export default function YourQuizzes({quizzes}){
                 ?   <YourQuizzesContainer data-identifier="quizz-card">
                         <AddQuizz>
                             <h2>Seus quizzes</h2>
-                            <Link to="/create-quizz/basic-informations">
+                            <Link to="/create-quizz">
                                 <button  data-identifier="create-quizz"><AddCircle color="#ec362d" width="40px" height="40px"/></button>
                             </Link>
                         </AddQuizz>
@@ -133,7 +133,7 @@ export default function YourQuizzes({quizzes}){
                     </YourQuizzesContainer>
                 :   <NoQuizzes>
                         <h2>Você não criou nenhum quizz ainda :(</h2>
-                        <Link to="/create-quizz/basic-informations"><button data-identifier="create-quizz">Criar Quizz</button></Link>
+                        <Link to="/create-quizz"><button data-identifier="create-quizz">Criar Quizz</button></Link>
                     </NoQuizzes>
             }
             

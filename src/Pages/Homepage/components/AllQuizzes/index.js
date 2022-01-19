@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { Container, Quizz, QuizzBackground } from "../../pageStyles"
 
 export default function AllQuizzes({quizzes}){
-
+    
     return(
         <Container>
             <h2>Todos os quizzes</h2>

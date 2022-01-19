@@ -54,6 +54,7 @@ export default function  Questions() {
             element.answers = shuffleArray(element.answers)
         })
         setQuestionsShuffled(questions)
+        //eslint-disable-next-line
     }, [])
 
     return(

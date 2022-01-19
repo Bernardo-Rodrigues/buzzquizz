@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react"
+import { useEffect, useContext } from "react"
 import { useParams } from "react-router"
 import QuizzBanner from "./components/QuizzBanner";
 import Questions from "./components/QuizzQuestions";
@@ -18,7 +18,8 @@ export default function Quizz(){
         api.quizz
             .getQuizz(quizzId)
             .then(answer => setQuizz(answer.data))
-    }, [api.quizz, quizzId])
+            //eslint-disable-next-line
+    }, [])
 
     if(!quizz) return <Loading/>
 

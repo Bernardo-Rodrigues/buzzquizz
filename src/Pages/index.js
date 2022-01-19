@@ -11,7 +11,7 @@ export default function Pages() {
         <Routes>
             <Route path="/" element={<Homepage/>}></Route>
             <Route path="/quizz/:quizzId" element={<Quizz/>}></Route>
-            <Route path="/create-quizz/:form" element={<CreateQuizz/>}></Route>
+            <Route path="/create-quizz/*" element={<CreateQuizz/>}></Route>
         </Routes>
         </>
     )
